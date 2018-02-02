@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body {
+            padding: 20px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+</head>
+<body>
+
+    <div ng-app="app" ng-controller="AppCtrl as vm">
+        <pre>{{vm | json}}</pre>
+
+        <ul>
+            <li ng-repeat="data in vm.menu" ng-include="'tree.html'"></li>
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

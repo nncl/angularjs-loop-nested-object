@@ -1,0 +1,7 @@
+<a>{{data.name}}</a>
+
+<ul>
+    <li ng-repeat="(k, data) in data"
+        ng-if="data.name"
+        ng-include="'tree.html'"></li>
+</ul>
